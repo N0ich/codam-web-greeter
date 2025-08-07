@@ -188,16 +188,16 @@ export class ExamModeUI extends UIScreen {
 		const form = this._form as UIExamModeElements;
 		form.examStartButton.disabled = false; // Always enable the button
 		return false;
-		const buttonDisabled = this._examStartTime.getTime() > Date.now(); // Disable the button if the exam start time is in the future
-		form.examStartButton.disabled = buttonDisabled;
-		if (!buttonDisabled) {
-			form.examStartTimer.innerText = "Click the arrow below to start your exam.";
-			const focusInput = this._getInputToFocusOn();
-			if (focusInput) {
-				focusInput.focus();
-			}
-		}
-		return buttonDisabled;
+		// const buttonDisabled = this._examStartTime.getTime() > Date.now(); // Disable the button if the exam start time is in the future
+		// form.examStartButton.disabled = buttonDisabled;
+		// if (!buttonDisabled) {
+		// 	form.examStartTimer.innerText = "Click the arrow below to start your exam.";
+		// 	const focusInput = this._getInputToFocusOn();
+		// 	if (focusInput) {
+		// 		focusInput.focus();
+		// 	}
+		// }
+		// return buttonDisabled;
 	}
 
 	protected _wigglePasswordInput(clearInput: boolean = true): void {
