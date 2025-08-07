@@ -186,6 +186,8 @@ export class ExamModeUI extends UIScreen {
 	// Returns true if the exam-start button is disabled, false otherwise
 	protected _enableOrDisableSubmitButton(): boolean {
 		const form = this._form as UIExamModeElements;
+		form.examStartButton.disabled = false; // Always enable the button
+		return false;
 		const buttonDisabled = this._examStartTime.getTime() > Date.now(); // Disable the button if the exam start time is in the future
 		form.examStartButton.disabled = buttonDisabled;
 		if (!buttonDisabled) {
